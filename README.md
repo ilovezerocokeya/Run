@@ -1,54 +1,32 @@
-# React + TypeScript + Vite
+# 대피GO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**"내 위치 기반으로 1km 반경 내 자연재해 발생 시 실시간 알림을 제공하는 대피 지원 앱"**
 
-Currently, two official plugins are available:
+비상 상황에 즉각적으로 대피할 수 있도록 사용자 위치를 기반으로 주변 위험 정보를 알려주는 **무로그인 알림 전용 앱**입니다.  
+산불, 홍수, 지진 등과 같은 자연재해를 탐지하고, 즉각 알림을 통해 사용자가 빠르게 대처할 수 있도록 돕습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 주요 기능
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ✅ **위험 탐지**: 내 위치 기반으로 반경 1km 내에서 발생한 자연재해를 실시간으로 탐지하여 사용자에게 알림을 보냅니다.
+- ✅ **실시간 푸시 알림**: 산불 등 자연재해 발생 시 즉각적으로 알림을 제공합니다.
+- ✅ **위치 확인**: 카카오 지도를 통해 사용자는 자신의 위치와 주변 상황을 확인할 수 있습니다.
+- ✅ **무로그인 사용**: 로그인 없이 누구나 손쉽게 이용할 수 있습니다.
+- ✅ **빠른 반응 속도**: 가볍고 직관적인 UI로 빠르게 대응할 수 있도록 설계되었습니다.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ 기술 스택
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+| 영역       | 기술                             |
+| ---------- | -------------------------------- |
+| 프론트엔드 | `React` + `Vite` + `TypeScript`  |
+| 디자인     | `Tailwind CSS`                   |
+| 지도       | `Kakao Map API`                  |
+| 날씨       | `OpenWeather API`                |
+| 위치       | `Geolocation API`                |
+| 알림       | `Firebase Cloud Messaging (FCM)` |
+| 상태 관리  | `Zustand`                        |
+| 코드 품질  | `ESLint`, `Prettier`             |
+| 빌드 도구  | `Vite`                           |
